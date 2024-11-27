@@ -1,0 +1,50 @@
+{
+	"schemaVersion": 1,
+	"id": "univers",
+	"version": "${version}",
+	"name": "univers",
+	"description": "",
+	"authors": [
+		"PlagLeFleau"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/univers/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.plaglefleau.Univers",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "com.plaglefleau.UniversDataGenerator",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "com.plaglefleau.UniversClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"univers.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
